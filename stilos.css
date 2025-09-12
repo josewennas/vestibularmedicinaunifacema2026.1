@@ -1,0 +1,215 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*font-family: 'Segoe UI', sans-serif;*/
+  background-color: #fff;
+  color: #012F51;
+  font-family: 'Sora', sans-serif;
+}
+
+/* TOPO COM BANNER */
+.topo img.banner-topo {
+  width: 100%;
+  display: block;
+  max-height: 620px;
+  object-fit: cover;
+}
+
+.topo_mobile{
+    display: none;
+}
+
+/* AÇÕES */
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.linha_dourada{
+    margin: 0;
+        width: 100%;
+    height: 12px;
+    background-color: #f5cc6c;
+
+}
+.botao {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  min-width: 200px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.botao-edital {
+  background-color: #a2c209;
+  color: #075837;
+  text-decoration: none;
+}
+
+.botao-inscricao {
+  background-color: #a2c209;
+  color: #075837;
+}
+
+.botao-inscreva {
+  background-color: #075837;
+  color: white;
+  text-decoration: none;
+}
+
+.botao-inscreva { animation: pulse 2s infinite;}
+@keyframes pulse{
+0%, 100%{transform: scale(1);}
+15% { transform: scale(1.1);}
+}
+
+
+/* RODAPÉ */
+footer {
+  background-color: #075837;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.rodape{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+
+
+footer img {
+  width: 140px;
+  margin-bottom: 10px;
+  margin: 3em;
+}
+
+footer p {
+
+  margin: 3em;
+}
+
+.videodocampuscaxias{
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin: 1em;
+padding: 1em;
+}
+
+.videodocampuscaxias h2{
+  color: #075837;
+  text-align: center;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+}
+
+/* Telas até 1024px (tablets e notebooks menores) */
+@media (max-width: 1024px) {
+  .acoes {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+.topo_mobile {
+    display: block;
+}
+
+.topo img.banner-topo {
+
+  display: none;
+
+}
+
+  .botao {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  footer img {
+    width: 120px;
+  }
+}
+
+/* Telas até 768px (tablets pequenos e celulares em paisagem) */
+@media (max-width: 768px) {
+  .botao {
+    padding: 16px;
+    font-size: 1rem;
+  }
+  .topo img.banner-topo {
+
+  display: none;
+
+}
+
+  .topo_mobile {
+    display: block;
+}
+  .acoes {
+    padding: 30px 10px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer img {
+    width: 100px;
+  }
+}
+
+/* Telas até 480px (celulares) */
+@media (max-width: 480px) {
+ /* .banner-topo {
+    max-height: 300px;
+    object-fit: cover;
+    
+  }*/
+
+  .video iframe{
+    width: 100%;
+  }
+  .banner-topo {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block; 
+}
+
+  .topo img.banner-topo {
+
+  display: none;
+
+}
+
+  .topo_mobile {
+    display: block;
+}
+  .botao {
+    font-size: 0.95rem;
+    padding: 14px 10px;
+  }
+
+  .rodape p {
+    font-size: 0.85rem;
+  }
+}
